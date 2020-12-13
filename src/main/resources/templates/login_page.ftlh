@@ -37,6 +37,9 @@
                         <div class="input-group mb-1">
                             <input class="btn btn-outline-dark" type="submit" value="Sign In"/>
                         </div>
+                        <div class="input-group mb-1">
+                            <a href="/registration">No account? Register</a>
+                        </div>
                     </form>
 
                 </div>

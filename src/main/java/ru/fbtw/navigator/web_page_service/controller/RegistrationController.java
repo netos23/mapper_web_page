@@ -3,12 +3,11 @@ package ru.fbtw.navigator.web_page_service.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import ru.fbtw.navigator.web_page_service.domain.Role;
 import ru.fbtw.navigator.web_page_service.domain.User;
 import ru.fbtw.navigator.web_page_service.repository.UserRepo;
 import ru.fbtw.navigator.web_page_service.service.RegistrationService;
+import ru.fbtw.navigator.web_page_service.service.UserService;
 
-import java.util.Collections;
 import java.util.Map;
 
 @Controller
@@ -16,10 +15,12 @@ public class RegistrationController {
 
     private final RegistrationService service;
     private final UserRepo userRepo;
+    private final UserService userService;
 
-    public RegistrationController(RegistrationService service, UserRepo userRepo) {
+    public RegistrationController(RegistrationService service, UserRepo userRepo, UserService userService) {
         this.service = service;
         this.userRepo = userRepo;
+        this.userService = userService;
     }
 
     @GetMapping("/registration")
@@ -54,10 +55,8 @@ public class RegistrationController {
             return "reg_page";
         }
 
+        userService.addUser(user);
 
-        user.setActive(true);
-        user.setRoles(Collections.singleton(Role.USER));
-        userRepo.save(user);
 
         return "redirect:/login";
     }
