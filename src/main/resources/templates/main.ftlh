@@ -1,4 +1,5 @@
 <#import "parts/common.ftl" as c>
+
 <@c.page>
 <#--<div class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-item active">
@@ -9,6 +10,7 @@
         </div>
     </div>
 </div>-->
+    <#include "parts/navbar.ftl">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg">

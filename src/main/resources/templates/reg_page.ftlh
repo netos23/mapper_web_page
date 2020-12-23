@@ -1,11 +1,11 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
-    <div class="container">
+    <div class="container-sm">
         <div class="row justify-content-md-center  mb-5  mt-5 ">
-            <div class="col col-5">
-                <div class="container mt-5 shadow-lg p-3  bg-white rounded">
+            <div class="col-sm col-5">
+                <div class="container-sm mt-5 shadow-lg p-3  bg-white rounded">
                     <div class="row mb-4">
-                        <div class="col-1">
+                        <div class="col-1 mr-1">
                             <img src="static/logo_black.png" alt="" width="50" height="50" class="d-inline-block align-center">
                         </div>
                         <div class="col-2">
