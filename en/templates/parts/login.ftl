@@ -12,7 +12,7 @@
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}">
         <div class="input-group mb-3">
-            <input class="btn btn-outline-light" type="submit" value="Sign In"/>
+            <input class="btn btn-outline-dark" type="submit" value="Sign In"/>
         </div>
     </form>
 </#macro>
@@ -21,7 +21,7 @@
     <div class="nav-item">
         <form action="/logout" method="post">
             <input type="hidden" name="_csrf" value="${_csrf.token}">
-            <input type="submit" class="btn btn-outline-dark" value="Sign Out"/>
+            <input type="submit" class="btn btn-dark" value="Sign Out"/>
         </form>
     </div>
 </#macro>

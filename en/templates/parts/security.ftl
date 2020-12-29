@@ -20,7 +20,7 @@
        <@login.logout/>
     <#else >
         <div>
-            <form class="d-flex" action="/login" method="get">
+            <form action="/login" method="get">
                 <input type="hidden" name="_csrf" value="${_csrf.token}">
                 <input type="submit" class="btn btn-dark" value="Log in"/>
             </form>
